@@ -1,19 +1,15 @@
 import React from 'react'
 
-const Image = () => <img src='https://images-na.ssl-images-amazon.com/images/I/A1FW1G46+aL._AC_UL900_SR900,600_.jpg' alt='Iron Flame'/>
-const Title = () => <h2>Iron Flame</h2>
-const Author = () => {
-    return <h4>Rebecca Yarros</h4>
-}
-
-const Book = () => {
-  return (
-    <article>
-          <Image />
-          <Title />
-          <Author />
-    </article>
-  )
+const Book = ({ img, title, author, children }) => {
+	return (
+		<article className='book'>
+			<img src={img} alt={title} />
+			<h2>{title}</h2>
+			<h4>{author}</h4>
+			{children} 
+			{/* Using children to access everything we render between component types */}
+		</article>
+	)
 }
 
 export default Book
