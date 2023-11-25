@@ -1,15 +1,6 @@
 import React from 'react'
 
 const EventExamples = () => {
-	const handleFormInput = (e) => {
-		console.log(e.target.value)
-		console.log('handle form input')
-	}
-
-	const handleFormSubmission = (e) => {
-		e.preventDefault()
-		console.log('Form Submitted')
-	}
 	return (
 		<section>
 			<form >
@@ -17,10 +8,12 @@ const EventExamples = () => {
 				<input
 					type='text'
 					name='example'
-					onChange={handleFormInput}
+					onChange={(e)=>console.log(e.target.value)}
 					style={{ margin: '1rem 0' }}
 				/>
-				<button type='submit' onClick={handleFormSubmission}>submit</button>
+				<button type='submit'>submit</button>
+				<button type='button' onClick={()=>console.log('click me')}>click me</button>
+
 			</form>
 		</section>
 	)
