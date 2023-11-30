@@ -5,14 +5,14 @@ import Book from './Book'
 import { books } from './data'
 
 const BookList = () => {
-	const someValue = 'Random Value'
-	const displayValue = () => {
-		console.log(someValue);
+	const getBook = (id) => {
+		const book = books.find((book) => book.id === id)
+		console.log(book)
 	}
 	return (
 		<section className='booklist'>
 			{books.map((book) => {
-				return <Book {...book} key={book.id} displayValue={displayValue} />
+				return <Book {...book} key={book.id} getBook={getBook} />
 			})}
 		</section>
 	)
@@ -20,8 +20,7 @@ const BookList = () => {
 
 export default BookList
 
-
-// Notes 
+// Notes
 
 // Map - creates a new array from calling a function for every array element.
 
