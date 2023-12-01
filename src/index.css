@@ -8,6 +8,11 @@ body{
 	color: black;
     background: rgb(240, 240, 240);
 }
+.title{
+    text-align: center;
+    margin-top: 4rem;
+    text-transform: capitalize;
+}
 .booklist {
 	width: 90vw;
 	max-width: 1170px;
@@ -32,10 +37,12 @@ h4{
     }
 }
 .book{
-    background: rgb(255, 255, 255);
+    background: #fff;
     text-align: center;
     border-radius: 1rem;
     padding: 2rem;
+    /* set relative */
+    position: relative;
 }
 
 
@@ -46,4 +53,15 @@ h4{
 
 .book h4, h2{
     letter-spacing: 2px;
+}
+.number{
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 1rem;
+    padding: .75rem;
+    border-top-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    background: #c35600;
+    color: white;
 }

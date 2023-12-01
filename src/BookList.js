@@ -2,19 +2,18 @@ import React from 'react'
 import Book from './Book'
 
 // React data flow -you can only pass props down from the parent to the child component
-import { books } from './data'
+import { books } from './Books'
 
 const BookList = () => {
-	const getBook = (id) => {
-		const book = books.find((book) => book.id === id)
-		console.log(book)
-	}
 	return (
-		<section className='booklist'>
-			{books.map((book) => {
-				return <Book {...book} key={book.id} getBook={getBook} />
-			})}
-		</section>
+		<>
+			<h1 className='title'>amazon best sellers</h1>
+			<section className='booklist'>
+				{books.map((book, index) => {
+					return <Book {...book} key={book.id} number={index} />
+				})}
+			</section>
+		</>
 	)
 }
 
